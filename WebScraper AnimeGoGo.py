@@ -45,6 +45,7 @@ def download_data():
     for download_link in soup.find_all("div", {"class": "download-anime"}):
         links = download_link.a.get("href")
         download_links.append(links)
+        print(download_links)
 
     anime_download_1 = requests.get("https://www3.gogoanime.io" + video_links[1])
     soup = BeautifulSoup(anime_download_1.text, "lxml")
