@@ -1,6 +1,6 @@
 from tkinter import *
 from bs4 import BeautifulSoup
-from PIL import ImageTk,Image
+from PIL import Image
 import requests
 import webbrowser
 from tkinter import messagebox
@@ -58,10 +58,16 @@ def download_pictures(width, height):
             img.save(str(x) + ".png")
 
 
-
+def menu():
+    print("")
 
 download_data()
 download_pictures(200, 200)
+
+
+
+
+
 
 
 
